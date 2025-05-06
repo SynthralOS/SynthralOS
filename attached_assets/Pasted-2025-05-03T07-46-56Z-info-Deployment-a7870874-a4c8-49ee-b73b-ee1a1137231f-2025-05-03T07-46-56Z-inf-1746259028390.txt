@@ -1,0 +1,117 @@
+2025-05-03T07:46:56Z info: Deployment: a7870874-a4c8-49ee-b73b-ee1a1137231f
+2025-05-03T07:46:56Z info: Build: b8a49e14-c46b-45cd-a043-17f7c9f8a181
+2025-05-03T07:46:56Z info: Connecting to builder
+2025-05-03T07:46:59Z info: Builder connected
+2025-05-03T07:47:00Z info: Installing packages
+2025-05-03T07:47:01Z info: Starting Build
+
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+
+vite v5.4.14 building for production...
+
+transforming...
+
+Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+✓ 4036 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../dist/public/index.html                     0.63 kB │ gzip:   0.38 kB
+
+✓ built in 19.54s
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    server/services/agent-toolkit.ts:219:25:
+      219 │           const result = eval(expression);
+          ╵                          ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    server/services/langgraph-executor.ts:682:27:
+      682 │             const result = eval(args.expression);
+          ╵                            ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+
+2 warnings
+
+
+  dist/index.js  1.1mb ⚠️
+
+⚡ Done in 640ms
+
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.3.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.3.0
+npm notice To update run: npm install -g npm@11.3.0
+npm notice
+
+2025-05-03T07:47:27Z info: Pushing pid1 binary layer...
+2025-05-03T07:47:29Z info: Pushing Repl layer...
+2025-05-03T07:47:29Z info: Pushing hosting layer...
+2025-05-03T07:47:29Z info: Nix layers for this Repl are uncached.
+2025-05-03T07:47:29Z info: Created pid1 binary layer
+2025-05-03T07:47:29Z info: Created hosting layer
+2025-05-03T07:48:23Z info: Created Repl layer
+2025-05-03T07:48:23Z info: Pushing Repl (cache) layer...
+2025-05-03T07:48:23Z info: Created Repl (cache) layer
+2025-05-03T07:50:37Z info: Created nix-0 layer
+2025-05-03T07:50:37Z info: uploading image for cached layer
+2025-05-03T07:50:38Z info: pushed cache image manifest
+2025-05-03T07:50:38Z info: pushed cache soci index manifest
+2025-05-03T07:50:38Z info: uploading cached layer
+2025-05-03T07:50:38Z info: successfully uploaded cached layer
+2025-05-03T07:50:39Z info: Pushed image manifest
+2025-05-03T07:50:40Z info: Pushed soci index manifest
+2025-05-03T07:52:43Z info: Creating Autoscale service
+> NODE_ENV=production node dist/index.js
+forwarding local port 5000 to external port 80 (mapped as 1104)
+
+/home/runner/workspace/node_modules/posthog-node/lib/node/index.esm.js:1
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+Node.js v20.18.1
+> NODE_ENV=production node dist/index.js
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+
+/home/runner/workspace/node_modules/posthog-node/lib/node/index.esm.js:1
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:286:7)
+import { posix, dirname, sep } from 'path';
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:122:5)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:122:5)
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+(node:390) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:286:7)
+Node.js v20.18.1
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:122:5)
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+Node.js v20.18.1
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:286:7)
+crash loop detected
+2025-05-03T07:56:05Z error: The deployment is crash looping. This can happen if the run command fails or exits immediately after starting. Check the logs for more information.

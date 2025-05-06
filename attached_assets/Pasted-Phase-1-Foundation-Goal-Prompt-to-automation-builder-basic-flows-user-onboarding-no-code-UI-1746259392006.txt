@@ -1,0 +1,76 @@
+Phase 1: Foundation
+🎯 Goal: Prompt-to-automation builder, basic flows, user onboarding, no-code UI
+Deliverables
+Stack Tools
+Frontend + Workspace UI + Supabase Auth
+Next.js, Tailwind, Supabase
+Search → Flow prompt engine
+LangChain, LangGraph, Langflow
+Langflow + Clay UI toggle integration
+Langflow, Clay-style table mode
+Custom Code Nodes (inline) + MVP DB
+Cline, Continue.dev, Mem0
+🟢 Phase 2: RAG, Memory, OCR & Scraping
+🎯 Goal: Upload → extract → store → scrape → parse → recall
+Deliverables
+Stack Tools
+File Upload + RAG Node (Fast)
+LightRAG, Supabase Storage, SupaVec
+OCR Workflow: region/latency-aware
+PaddleOCR, Google Vision, Tesseract, DocTR
+Memory Layer + Prompt Recall
+Mem0, SupaVec, LangGraph
+Initial Scraper Layer + CRON
+BeautifulSoup, Crawl4AI, LangGraph CRON
+🔌 PHASE 3: CONNECTORS + TELEMETRY
+Goal: Integrate APIs + key management + trace logs
+Deliverables
+Tools
+Composio + Panora (BYOK)
+Composio, Panora
+Nango + Integuru
+Nango, Integuru
+RudderStack + PostHog setup
+RudderStack, PostHog
+Signoz + retry telemetry
+Signoz, BullMQ fallback
+🧹 PHASE 4: SCRAPING + OCR + OSINT
+Goal: Structured scraping, OCR intelligence, social monitoring
+Deliverables
+Tools
+LangGraph Agent Wrappers for all third-party agents
+Align with OAP & MCP & ACP
+Crawl4AI, Scrapy, ScrapeGraph AI
+Visual + spider scraping
+Playwright + Puppeteer fallback
+Headless scraping
+Integrate Instagram AI Agent
+Automate image + caption workflows
+OCR routing: PaddleOCR, EasyOCR, DocTR
+Tesseract, Google Vision
+Extend + Add KUSH AI (Blog agent)
+PDF/audio-to-blog pipelines + Work with RAG
+Add Riona Agent (Twitter, GitHub)
+Smart OSINT + GH issue tracker
+Social-Listener + Twint + NewsCatcher + Huginn
+OSINT layer
+🧰 PHASE 5: TOOLING + DEV MODE (Weeks 17–20)
+Goal: Developers can build, reuse, export, inject tools
+Deliverables
+Tools
+Tool registry + versioning
+Supabase Tool Table
+Kyro integration (serverless multi-channel agent)
+Extend for Huginn + CRON
+PR-Agent
+GitHub tool + Supabase Writeback
+Cline Node + Continue.dev + validation
+Continue.dev, Pydantic
+OpenDevin + JSON tool scaffolds
+OpenDevin
+Open Interpreter
+Code executor node inside Cline
+Shared Tool Store + user tool uploads
+Supabase + UI
+Tool registry tags agent_origin = agent_name
+Traceable, version-controlled OSS agents

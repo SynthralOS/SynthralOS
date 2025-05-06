@@ -1,0 +1,129 @@
+OCR ENGINE ROUTING
+Condition
+Route To
+Reason
+layout = table
+DocTR
+Structured document extraction
+handwriting_detected = true
+EasyOCR
+Best handwriting model
+heavy_pdf_or_image = true
+Google Vision
+Cloud-native accurate OCR
+region = EU/latency > 1s
+PaddleOCR
+Regional fallback
+result = empty
+Tesseract
+Last-mile fallback
+structured_json_required
+Omniparser
+Visual table to JSON parsing
+🧹 SCRAPER INFRASTRUCTURE ROUTING
+Condition
+Route To
+Reason
+html = simple
+BeautifulSoup
+Basic parser
+pages > 1
+Crawl4AI
+Crawl logic
+js_required = true
+PlaywrightURLLoader (LangChain)
+Rendered content
+site = visual
+ScrapeGraph AI
+Structure-first logic
+source = job_board
+Jobspy
+Specialized parser
+scrape_type = spider
+Scrapy
+Web spider logic
+DOM_changed = true
+ChangeDetection.io
+Trigger new action
+403 / 429
+Proxy + BullMQ delay
+Rate limiting fallback
+bot_protection = true
+Undetected Chrome / Cloudscraper
+CAPTCHA bypassing
+file_type = .html/.csv
+UnstructuredFileLoader / CSVLoader (LangChain)
+Structured data parsing
+🤖 AGENT FRAMEWORK ROUTING
+Condition
+Route To
+Reason
+agent_type = simple
+AgentGPT
+One-shot logic
+recursive_planning = true
+AutoGPT / BabyAGI
+Goal decomposition
+agent_roles > 1
+MetaGPT
+Multi-role logic
+agent_self_fix = true
+Archon
+Agent self-debugging
+intent = build_agent
+All-Hands / AutoBuilder
+Code agent scaffolding
+agents_need_to_communicate = true
+A2A Protocol (OAP)
+Agent handoff
+protocol = modular
+Modular Agent Runtime
+GPU/Edge-ready execution
+protocol = langchain
+LangChain Protocol Loader
+Load RunnableAgent & Tools
+agent_rollback = true 
+Context7
+Reduce delay in re-planning
+context_window_lost = true
+Context7 fallback
+Cache + restore
+multi-agent_context = short-term
+Context7 shared cache
+Speed up cross-agent planning
+latency > 1s
+Use Context7 → Mem0 → Graphiti
+Fastest first
+Condition (Social Media Agents)
+Route To
+Reason
+task_type = blog_generation
+KUSH AI Agent
+Blog writer from structured media
+platform = instagram
+Instagram AI Agent
+Posting + automation logic
+platform = twitter/github
+Riona Agent
+Smart OSINT + engagement
+multi_channel = true
+Kyro Agent
+Unified agent for cross-posting
+agent_source = third_party
+Wrapped Agent (LangGraph)
+Use existing OSS scaffold
+agent_protocol_required = oap/modular
+MCP Wrapped Agent
+OAP/ACP compliant layer
+agent_roles > 1
+CrewAI logic 
+(Internal LangGraph role planner)
+exec_required = true
+Open Interpreter
+LLM Code Reasoning
+trigger=pull_request
+PR-Agent
+task_type = creative
+CAMEL-AI
+task_complexity>2 && tools_required = true
+Autogen

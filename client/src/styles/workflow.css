@@ -1,0 +1,136 @@
+/* Animation for flowing edges */
+@keyframes dash {
+  to {
+    stroke-dashoffset: 20;
+  }
+}
+
+.animated-connection-path {
+  animation: dash 1s linear infinite;
+}
+
+/* Subtle pulse animation for active nodes */
+@keyframes pulse-subtle {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite;
+}
+
+/* Node hover effects */
+.node-card {
+  transition: all 0.2s ease;
+}
+
+.node-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Flow of data animation for edge */
+@keyframes flow-animation {
+  0% {
+    stroke-dashoffset: 24;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.flow-animation {
+  stroke-dasharray: 6, 3;
+  animation: flow-animation 1s linear infinite;
+}
+
+/* Drag indicator animation */
+@keyframes drag-indicator {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.drag-indicator {
+  animation: drag-indicator 1.5s ease-in-out infinite;
+}
+
+/* Success pulse animation */
+@keyframes success-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.success-pulse {
+  animation: success-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Error shake animation */
+@keyframes error-shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.error-shake {
+  animation: error-shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/* Node panel item hover effect */
+.node-panel-item {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.node-panel-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Node selection glow effect */
+.node-selected {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5),
+              0 0 15px rgba(59, 130, 246, 0.25);
+}
+
+/* Connection point highlight */
+.connection-point {
+  transition: all 0.2s ease;
+}
+
+.connection-point:hover {
+  transform: scale(1.5);
+  filter: drop-shadow(0 0 3px rgba(59, 130, 246, 0.5));
+}

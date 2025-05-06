@@ -1,0 +1,86 @@
+✓ 4036 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../dist/public/index.html                     0.63 kB │ gzip:   0.38 kB
+
+✓ built in 19.87s
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    server/services/langgraph-executor.ts:682:27:
+      682 │             const result = eval(args.expression);
+          ╵                            ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+
+▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+
+    server/services/agent-toolkit.ts:219:25:
+      219 │           const result = eval(expression);
+          ╵                          ~~~~
+
+  You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+
+
+✘ [ERROR] Cannot assign to "toolPrompt" because it is a constant
+
+    server/services/agent/protocols/CamelAIProtocol.ts:464:6:
+      464 │       toolPrompt += `- ${tool.name}: ${tool.description}\n`;
+          ╵       ~~~~~~~~~~
+
+  The symbol "toolPrompt" was declared a constant here:
+
+    server/services/agent/protocols/CamelAIProtocol.ts:459:10:
+      459 │     const toolPrompt = `${basePrompt}\n\nYou have access to the f...
+          ╵           ~~~~~~~~~~
+
+✘ [ERROR] Cannot assign to "toolPrompt" because it is a constant
+
+    server/services/agent/protocols/CamelAIProtocol.ts:467:4:
+      467 │     toolPrompt += `\nIf appropriate for your response, you can su...
+          ╵     ~~~~~~~~~~
+
+  The symbol "toolPrompt" was declared a constant here:
+
+    server/services/agent/protocols/CamelAIProtocol.ts:459:10:
+      459 │     const toolPrompt = `${basePrompt}\n\nYou have access to the f...
+          ╵           ~~~~~~~~~~
+
+
+✘ [ERROR] Cannot assign to "prompt" because it is a constant
+
+    server/services/agent/protocols/BabyAGIProtocol.ts:495:6:
+      495 │       prompt += `- ${paramName} (${paramInfo.type}${paramInfo.req...
+          ╵       ~~~~~~
+
+  The symbol "prompt" was declared a constant here:
+
+    server/services/agent/protocols/BabyAGIProtocol.ts:490:10:
+      490 │     const prompt = `Task: ${task.description}\n\n` +
+          ╵           ~~~~~~
+
+✘ [ERROR] Cannot assign to "prompt" because it is a constant
+
+    server/services/agent/protocols/BabyAGIProtocol.ts:498:4:
+      498 │     prompt += `\nBased on the task description, generate appropri...
+          ╵     ~~~~~~
+
+  The symbol "prompt" was declared a constant here:
+
+    server/services/agent/protocols/BabyAGIProtocol.ts:490:10:
+      490 │     const prompt = `Task: ${task.description}\n\n` +
+          ╵           ~~~~~~
+
+
+2 warnings and 4 errors
+
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.3.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.3.0
+npm notice To update run: npm install -g npm@11.3.0
+npm notice
+

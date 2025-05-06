@@ -1,0 +1,75 @@
+[12:15:06.458] Running build in Washington, D.C., USA (East) – iad1
+[12:15:06.474] Cloning github.com/SynthralOS/SynthralOS-main-app (Branch: master, Commit: f0a260e)
+[12:15:06.623] Previous build caches not available
+[12:15:06.938] Cloning completed: 464.000ms
+[12:15:07.317] Running "vercel build"
+[12:15:07.724] Vercel CLI 41.7.0
+[12:15:08.305] Installing dependencies...
+[12:15:12.373] npm warn deprecated request-promise@4.2.6: request-promise has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
+[12:15:13.392] npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+[12:15:13.510] npm warn deprecated har-validator@5.1.5: this library is no longer supported
+[12:15:13.693] npm warn deprecated vm2@3.9.19: The library contains critical security issues and should not be used for production! The maintenance of the project has been discontinued. Consider migrating your code to isolated-vm.
+[12:15:14.075] npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+[12:15:16.409] npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+[12:15:16.487] npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+[12:15:17.037] npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+[12:15:31.047] 
+[12:15:31.048] added 1056 packages in 22s
+[12:15:31.048] 
+[12:15:31.048] 119 packages are looking for funding
+[12:15:31.048]   run `npm fund` for details
+[12:15:31.278] Running "npm run build"
+[12:15:31.499] 
+[12:15:31.500] > rest-express@1.0.0 build
+[12:15:31.500] > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+[12:15:31.500] 
+[12:15:31.925] [36mvite v5.4.14 [32mbuilding for production...[36m[39m
+[12:15:31.980] transforming...
+[12:15:32.291] Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+[12:15:32.291]   npx update-browserslist-db@latest
+[12:15:32.291]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[12:15:43.975] [32m✓[39m 4070 modules transformed.
+[12:15:44.507] rendering chunks...
+[12:15:45.199] computing gzip size...
+[12:15:45.248] [2m../dist/public/[22m[32mindex.html                   [39m[1m[2m    0.63 kB[22m[1m[22m[2m │ gzip:   0.38 kB[22m
+[12:15:45.249] [2m../dist/public/[22m[2massets/[22m[35mindex-TFaj6qvQ.css    [39m[1m[2m  124.47 kB[22m[1m[22m[2m │ gzip:  20.24 kB[22m
+[12:15:45.249] [2m../dist/public/[22m[2massets/[22m[36mcookies-BLNisO5E.js   [39m[1m[2m    8.67 kB[22m[1m[22m[2m │ gzip:   2.91 kB[22m
+[12:15:45.249] [2m../dist/public/[22m[2massets/[22m[36msecurity-BHGSdNAk.js  [39m[1m[2m    9.59 kB[22m[1m[22m[2m │ gzip:   2.76 kB[22m
+[12:15:45.249] [2m../dist/public/[22m[2massets/[22m[36mblog-CzLcpwFz.js      [39m[1m[2m   11.65 kB[22m[1m[22m[2m │ gzip:   3.06 kB[22m
+[12:15:45.249] [2m../dist/public/[22m[2massets/[22m[36mroadmap-DbKoB5pt.js   [39m[1m[2m   13.82 kB[22m[1m[22m[2m │ gzip:   3.88 kB[22m
+[12:15:45.249] [2m../dist/public/[22m[2massets/[22m[36mdemo-BMRhtKJ3.js      [39m[1m[2m   15.86 kB[22m[1m[22m[2m │ gzip:   4.26 kB[22m
+[12:15:45.249] [2m../dist/public/[22m[2massets/[22m[36mcareers-DyldcWge.js   [39m[1m[2m   16.71 kB[22m[1m[22m[2m │ gzip:   4.36 kB[22m
+[12:15:45.249] [2m../dist/public/[22m[2massets/[22m[36mindex-BKBIWBMw.js     [39m[1m[33m1,881.51 kB[39m[22m[2m │ gzip: 514.39 kB[22m
+[12:15:45.250] [32m✓ built in 13.30s[39m
+[12:15:45.250] [33m
+[12:15:45.250] (!) Some chunks are larger than 500 kB after minification. Consider:
+[12:15:45.250] - Using dynamic import() to code-split the application
+[12:15:45.250] - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+[12:15:45.250] - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[12:15:45.336] ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+[12:15:45.336] 
+[12:15:45.337]     server/services/agent-toolkit.ts:219:25:
+[12:15:45.337]       219 │           const result = eval(expression);
+[12:15:45.337]           ╵                          ~~~~
+[12:15:45.337] 
+[12:15:45.338]   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+[12:15:45.338] 
+[12:15:45.354] ▲ [WARNING] Using direct eval with a bundler is not recommended and may cause problems [direct-eval]
+[12:15:45.354] 
+[12:15:45.357]     server/routes/langchain-routes.ts:427:26:
+[12:15:45.357]       427 │             return String(eval(input));
+[12:15:45.358]           ╵                           ~~~~
+[12:15:45.358] 
+[12:15:45.359]   You can read more about direct eval and bundling here: https://esbuild.github.io/link/direct-eval
+[12:15:45.359] 
+[12:15:45.401] 2 warnings
+[12:15:45.401] 
+[12:15:45.401]   dist/index.js  1.4mb ⚠️
+[12:15:45.401] 
+[12:15:45.401] ⚡ Done in 77ms
+[12:15:45.492] Build Completed in /vercel/output [37s]
+[12:15:45.516] Deploying outputs...
+[12:15:46.807] 
+[12:15:47.105] Deployment completed
+[12:16:12.917] Uploading build cache [141.36 MB]...
+[12:16:14.946] Build cache uploaded: 2.028s

@@ -1,0 +1,90 @@
+Switching Conditions
+How to deploy multiplatform switching conditions, and let the platform internally switch between them.
+🔁 RAG DB Switching
+Condition
+Route To
+Reason
+file_size < 1MB
+LightRAG
+Fast lookup for lightweight content
+dataset_size > 1GB
+Milvus
+Scale-heavy indexing, optimized search
+query.requires_metadata = true
+Weaviate
+Advanced metadata filtering and hybrid search
+structured_memory = true
+Graphiti or Zep
+Knowledge graph or session memory retrieval
+bring_your_rag = true && source = Pinecone
+User RAG Integration (via MCP)
+User's own Pinecone/Vectorstore
+user.plan = free
+SupaVec (pgvector)
+Lightweight DB for cost-effective RAG
+query_tagging_enabled = true
+Qdrant
+Tag-aware vector search (optional future expansion)
+ocr_result_injected = true
+SupaVec or LightRAG
+OCR-doc lightweight embedding
+agent_context_required = true
+Mem0
+Persistent structured memory for multi-agent consistency
+multi-agent_context = true
+Mem0 (Shared Memory Space)
+Context bridging between agents
+delta_memory_mode = enabled
+Context7 → LightRAG first
+Fast fallback memory update flow
+Condition
+Route To
+Reason
+query_domain = enterprise_dataset
+Milvus or Weaviate
+Handle large secured data
+runtime_latency > 1s
+LightRAG fallback
+Faster default if heavy RAG is too slow
+rag_failures > threshold
+Fallback to LightRAG or SupaVec
+Maintain SLA reliability
+knowledge_graph_required = true
+Graphiti
+Navigate structured knowledge
+prompt_similarity = low
+Re-query via SupaVec backup
+Higher redundancy for mission-critical queries
+rag_versioning_enabled = true
+Versioned RAG Logs (Supabase)
+Save audit trails of responses
+Tier
+Default Tool
+Fallbacks
+Small/quick datasets
+LightRAG
+SupaVec
+Large datasets
+Milvus, Weaviate
+LightRAG
+User-supplied RAGs
+MCP-connected (Pinecone, etc.)
+Default fallback to LightRAG
+Structured memory
+Mem0 / Graphiti / Zep
+Context7 assist
+High reliability mode
+LightRAG → SupaVec → requery
+🧠 Memory Switching
+Condition
+Route To
+Reason
+workflow_requires_memory = true
+Mem0
+Contextful persistence
+shared_agent_state = true
+Mem0 (shared zone)
+Multi-agent memory
+document graph = true
+Graphiti or Zep
+Structured entities
