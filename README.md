@@ -43,8 +43,8 @@ SynthralOS follows a modular architecture divided into 6 development phases:
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/synthralosr.git
-   cd synthralos
+   git clone https://github.com/yourusername/SynthralOS-main-app.git
+   cd SynthralOS-main-app
    ```
 
 2. Install dependencies
